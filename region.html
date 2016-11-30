@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"> 
+    <link rel="stylesheet" href="style.css">
+    <title>AFS Hamar | Frivilligregister</title>
+    <style>
+      #content {	
+      height: auto;
+      }
+
+      .button {
+      width: 170px;
+      height: 50px;
+      margin-left: 20px;
+      }
+
+      .button-text {
+      font-size: 20px;
+      line-height: 50px;
+      }
+
+      table {
+      width: 740px;
+      border-collapse: collapse;
+      }
+
+      th, td {
+      font-size: 18px;
+      padding-left: 10px;
+      padding-right: 0px;
+      margin-left: 0px;
+      padding-bottom: 8.5px;
+      padding-top: 8.5px;
+      text-align: left;
+      border-bottom: 1px solid black;
+      }
+
+      #adresse {
+      font-size: 18px;
+      }
+
+      #ute {
+      background-color: #e15656;
+      border: none;
+      }
+
+      #styret {
+      background-color: #82Cef9;
+      border: none;
+      }
+    </style>
+    <script type="text/javascript">
+      var password;
+
+      var pass1="afshamar2016";
+
+      password=prompt('Skriv inn passordet for å få tilgang!',' ');
+
+      if (password==pass1) {
+        alert('Trykk OK for å gå videre!');
+      }
+      else {
+        alert('Feil passord!');
+        window.location="main.html";
+      }
+
+      function toggle_visibility(id) {
+        var e = document.getElementById(id);
+        if(e.style.display == 'block')
+          e.style.display = 'none';
+        else
+          e.style.display = 'block';
+      }
+    </script>
+  </head>
+  <body>
+    <div id="content">
+      <a href="region.html"><div class="button" style="margin-left: 40px;">
+        <p class="button-text">REGION</p>
+      </div></a>
+      <div class="button" style="background-color: #f46242;">
+        <p class="button-text">NAVN</p>
+      </div>
+      <div class="button" style="background-color: #cc9966;">
+        <p class="button-text">ALDER</p>
+      </div>
+      <div class="button" style="background-color: #ffcc00;">
+        <p class="button-text">OPPGAVER</p>
+      </div>
+      <div style="width: 100%;">
+        <div class="button" style="width: 50px; height: 40px; margin-left: 40px; margin-top: 20px; margin-bottom: 20px; background-color: #e15656;">
+        </div>
+        <div class="button" style="width: 390px; height: 40px; margin-top: 20px; margin-bottom: 20px; background-color: #e6e6e6;">
+          <p class="button-text" style="line-height: 40px; font-size: 18px; color: black; text-align: left; letter-spacing: 0px;">Frivillig bor for tiden ikke i Hedmark/Oppland</p>
+        </div>
+      </div>
+      <div style="width: 100%;">
+        <div class="button" style="width: 50px; height: 40px; margin-left: 40px; margin-top: 20px; margin-bottom: 20px; background-color: #82Cef9;">
+        </div>
+        <div class="button" style="width: 100px; height: 40px; margin-top: 20px; margin-bottom: 20px; background-color: #e6e6e6;">
+          <p class="button-text" style="line-height: 40px; font-size: 18px; color: black; text-align: left; letter-spacing: 0px;">Styremedlem</p>
+        </div>
+      </div>
+      <div class="button" style="width: 740px; margin-left: 40px; margin-top: 0px; background-color: #9A9A9A;" onclick="toggle_visibility('hedmark')";>
+        <p class="button-text">HEDMARK (33)</p>
+      </div>
+      <div id="hedmark" style="display: none;">
+        <div class="button" style="width: 740px; margin-top: 0px; margin-left: 40px; background-color: gray;" onclick="toggle_visibility('hedmark-kommuner'); toggle_visibility('hedmark-alle')";>
+          <p class="button-text">VIS ALLE (33)</p>
+        </div>
+        <div id="hedmark-alle" class="button" style="width: 740px; height: auto; margin-top: 0px; margin-left: 40px; background-color: white; display: none;">
+          <table>
+            <tr>
+              <th>Navn</th>
+              <th>Adresse</th>
+              <th>Telefon</th>
+              <th>E-post</th>
+            </tr>
+            <tr>
+              <td>Bekken, Kari Elisabet</td>
+              <td id="adresse">Dalbylykkja 17,<br />2380 Brumunddal</td>
+              <td>623 40 159<br />901 51 710</td>
+              <td>karielisabetbekken@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Bestum, Tiril Krogh</td>
+              <td id="adresse">Trangsrudroa 116,<br />2270 Flisa</td>
+              <td>473 88 961</td>
+              <td>tirilak@gmail.com</td>
+            </tr>
+            <tr id="styret">
+              <td>Bjørkholen, Beate</td>
+              <td id="adresse">Rønningsdalen 26,<br />2450 Rena</td>
+              <td>913 64 758</td>
+              <td>bb_ratata@hotmail.com</td>
+            </tr>
+            <tr id="styret">
+              <td>Bjørlo, Astrid</td>
+              <td id="adresse">Lille Prestrudveg 43,<br />2315 Hamar</td>
+              <td>907 18 567</td>
+              <td>rubenyga@online.no</td>
+            </tr>
+            <tr>
+              <td>Borgos, Kari Kristine<br />Almåsvold</td>
+              <td id="adresse">Bjønnkroken 31,<br />2500 Tynset</td>
+              <td>455 13 171</td>
+              <td>kari.borgos@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Bue, Marit</td>
+              <td id="adresse">Hamarvegen 420,<br />2411 Elverum</td>
+              <td>938 65 224</td>
+              <td>maritbue@yahoo.no</td>
+            </tr>
+            <tr>
+              <td>Glorvigen, Borghild</td>
+              <td id="adresse">Østre Gjesåsveg 580,<br />2280 Gjesåsen</td>
+              <td>629 50 177<br />948 67 585</td>
+              <td>borghild.glorvigen@lr.no</td>
+            </tr>
+            <tr>
+              <td>Haraldsrud, Elisabeth</td>
+              <td id="adresse">Utsiktsveien 4,<br />2208 Kongsvinger</td>
+              <td>913 71 579</td>
+              <td>elisabeth.haraldsrud@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Haugtomt, Halvard<br />Andreas Sele</td>
+              <td id="adresse">Ilevegen 9,<br />2312 Ottestad</td>
+              <td>625 33 698<br />975 44 816</td>
+              <td>halvard@haugtomt.no</td>
+            </tr>
+            <tr>
+              <td>Henjum, Mette</td>
+              <td id="adresse">Løypevegen 23,<br />2319 Hamar</td>
+              <td>990 26 910</td>
+              <td>mette.henjum@gmail.com</td>
+            </tr>
+            <tr id="styret">
+              <td>Hovden, Jonas Fuglum</td>
+              <td id="adresse">Korsgata 25a,<br />2315 Hamar</td>
+              <td>991 29 095</td>
+              <td>jonas.hovden@live.no</td>
+            </tr>
+            <tr>
+              <td>Killi, Torill Synnøve</td>
+              <td id="adresse">Østaasvegen 625,<br />2324 Vang (Hedmark)</td>
+              <td>625 98 459<br />906 55 685</td>
+              <td>torkilli.tk41@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Kjørum, Monica</td>
+              <td id="adresse">Skjønsbergvegen 15,<br />2318 Hamar</td>
+              <td>408 41 322</td>
+              <td>mkjorum@outlook.com</td>
+            </tr>
+            <tr id="styret">
+              <td>Larsen, Kristin Westjordet</td>
+              <td id="adresse">Aasmund Vinjes gt 4,<br />2315 Hamar</td>
+              <td>625 28 932<br />418 51 390</td>
+              <td>krwe@helse-sorost.no</td>
+            </tr>
+            <tr id="ute">
+              <td>Larsen, Oda Marie<br />Westjordet</td>
+              <td id="adresse">Aasmund Vinjes gt 4,<br />2315 Hamar</td>
+              <td>469 20 550</td>
+              <td>oda_larsen@live.no</td>
+            </tr>
+            <tr>
+              <td>Nergaard, Magni</td>
+              <td id="adresse">Åsveien 3,<br />2500 Tynset</td>
+              <td>906 03 305</td>
+              <td>magni.nergaard@fjellnett.no</td>
+            </tr>
+            <tr>
+              <td>Nordsveen, Marit</td>
+              <td id="adresse">Storgata 7,<br />2335 Stange</td>
+              <td>625 72 386</td>
+              <td>marit_nordsveen@hotmail.com</td>
+            </tr>
+            <tr>
+              <td>Røhnebæk, Kjersti</td>
+              <td id="adresse">Onsumveien 141,<br />2365 Åsmarka</td>
+              <td>979 87 830</td>
+              <td>kjerstirohnebak@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Schulstad, Elsa Helene</td>
+              <td id="adresse">Solveien 4,<br />2406 Elverum</td>
+              <td>990 14 085</td>
+              <td>elsa.schulstad@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Schulstad, Ingrid</td>
+              <td id="adresse">Solveien 4,<br />2406 Elverum</td>
+              <td>942 17 202</td>
+              <td>ingrid.schulstad@gmail.com</td>
+            </tr>
+            <tr id="styret">
+              <td>Sele, Synvis Wannag</td>
+              <td id="adresse">Stavhellinga 19,<br />2319 Hamar</td>
+              <td>625 44 698</td>
+              <td>synvisws@online.no</td>
+            </tr>
+            <tr>
+              <td>Sjølie, Tina Yumin</td>
+              <td id="adresse">Bureiservegen 25,<br />2435 Braskereidfoss</td>
+              <td>955 54 406</td>
+              <td>tinayumin@yahoo.com</td>
+            </tr>
+            <tr>
+              <td>Skjelbostad, Sigrid Fu</td>
+              <td id="adresse">Dalbyvegen 14,<br />2386 Brumunddal</td>
+              <td>473 37 100</td>
+              <td>sigridfu@hotmail.com</td>
+            </tr>
+            <tr id="ute">
+              <td>Sletten, Kirsti</td>
+              <td id="adresse">Bjørgedalsvegen 123,<br />2388 Brumunddal</td>
+              <td>403 86 262</td>
+              <td>kirstisletten@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Sørensen, Anna Sannes</td>
+              <td id="adresse">Sjøgata 10,<br />2450 Rena</td>
+              <td>958 71 898</td>
+              <td>anna.sannes@hotmail.com</td>
+            </tr>
+            <tr>
+              <td>Sørensen, Aslak Mareno</td>
+              <td id="adresse">Sjøgata 10,<br />2450 Rena</td>
+              <td>900 51 797</td>
+              <td>aslakms@online.no</td>
+            </tr>
+            <tr id="styret">
+              <td>Sørensen, Kari Sannes</td>
+              <td id="adresse">Sjøgata 10,<br />2450 Rena</td>
+              <td>992 70 030</td>
+              <td>karisaso@online.no</td>
+            </tr>
+            <tr>
+              <td>Sørensen, Marta Sannes</td>
+              <td id="adresse">Sjøgata 10,<br />2450 Rena</td>
+              <td>624 41 502</td>
+              <td>martasorensen@hotmail.com</td>
+            </tr>
+            <tr id="ute">
+              <td>Stensberg, Thora Maria<br />Eliassen</td>
+              <td id="adresse">Jernsetervegen 146,<br />2335 Stange</td>
+              <td>625 82 357<br />456 99 887</td>
+              <td>thora-maria@live.no</td>
+            </tr>
+            <tr id="ute">
+              <td>Tønnessen, Tobias<br />Havnen</td>
+              <td id="adresse">Ajerveien 7A,<br />2319 Hamar</td>
+              <td>625 28 075<br />416 92 977</td>
+              <td>tobiasht93@gmail.com</td>
+            </tr>
+            <tr id="styret">
+              <td>Vegard, Eivind</td>
+              <td id="adresse">Fokholgutua 84,<br />2335 Stange</td>
+              <td>415 52 479</td>
+              <td>vegard_e98@hotmail.com</td>
+            </tr>
+            <tr>
+              <td>Ødegård, Linea B. Strand</td>
+              <td id="adresse">Kløvstadhøgdvegen 189,<br />2372 Brøttum</td>
+              <td>623 68 924<br />940 39 966</td>
+              <td>lineaodegard@outlook.com</td>
+            </tr>
+            <tr id="styret">
+              <td>Øfsti, Bjørg</td>
+              <td id="adresse">Dalbyvegen 14,<br />2380 Brumunddal</td>
+              <td>915 61 611</td>
+              <td>bjorg.ofsti@yahoo.com</td>
+            </tr>
+          </table>
+        </div>
+        <div id="hedmark-kommuner" style="display: block;">
+        <div class="button" style="width: 740px; margin-top: 0px; margin-left: 40px; background-color: gray;" onclick="toggle_visibility('elverum')";>
+          <p class="button-text">ELVERUM (3)</p>
+        </div>
+        <div id="elverum" class="button" style="width: 740px; height: auto; margin-top: 0px; margin-left: 40px; background-color: white; display: none;">
+          <table>
+            <tr>
+              <th>Navn</th>
+              <th id="adresse">Adresse</th>
+              <th>Telefon</th>
+              <th>E-post</th>
+            </tr>
+            <tr>
+              <td>Bue, Marit</td>
+              <td id="adresse">Hamarvegen 420,<br />2411 Elverum</td>
+              <td>938 65 224</td>
+              <td>maritbue@yahoo.no</td>
+            </tr>
+            <tr>
+              <td>Schulstad, Elsa Helene</td>
+              <td id="adresse">Solveien 4,<br />2406 Elverum</td>
+              <td>990 14 085</td>
+              <td>elsa.schulstad@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Schulstad, Ingrid</td>
+              <td id="adresse">Solveien 4,<br />2406 Elverum</td>
+              <td>942 17 202</td>
+              <td>ingrid.schulstad@gmail.com</td>
+            </tr>
+          </table>
+        </div>
+        <div class="button" style="width: 740px; margin-top: 0px; margin-left: 40px; background-color: gray;" onclick="toggle_visibility('hamar')";>
+          <p class="button-text">HAMAR (9)</p>
+        </div>
+        <div id="hamar" class="button" style="width: 740px; height: auto; margin-top: 0px; margin-left: 40px; background-color: white; display: none;">
+          <table>
+            <tr>
+              <th>Navn</th>
+              <th id="adresse">Adresse</th>
+              <th>Telefon</th>
+              <th>E-post</th>
+            </tr>
+            <tr id="styret">
+              <td>Bjørlo, Astrid</td>
+              <td id="adresse">Lille Prestrudveg 43,<br />2315 Hamar</td>
+              <td>907 18 567</td>
+              <td>rubenyga@online.no</td>
+            </tr>
+            <tr>
+              <td>Henjum, Mette</td>
+              <td id="adresse">Løypevegen 23,<br />2319 Hamar</td>
+              <td>990 26 910</td>
+              <td>mette.henjum@gmail.com</td>
+            </tr>
+            <tr id="styret">
+              <td>Hovden, Jonas Fuglum</td>
+              <td id="adresse">Korsgata 25a,<br />2315 Hamar</td>
+              <td>991 29 095</td>
+              <td>jonas.hovden@live.no</td>
+            </tr>
+            <tr>
+              <td>Killi, Torill Synnøve</td>
+              <td id="adresse">Østaasvegen 625,<br />2324 Vang (Hedmark)</td>
+              <td>625 98 459<br />906 55 685</td>
+              <td>torkilli.tk41@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Kjørum, Monica</td>
+              <td id="adresse">Skjønsbergvegen 15,<br />2318 Hamar</td>
+              <td>408 41 322</td>
+              <td>mkjorum@outlook.com</td>
+            </tr>
+            <tr id="styret">
+              <td>Larsen, Kristin Westjordet</td>
+              <td id="adresse">Aasmund Vinjes gt 4,<br />2315 Hamar</td>
+              <td>625 28 932<br />418 51 390</td>
+              <td>krwe@helse-sorost.no</td>
+            </tr>
+            <tr id="ute">
+              <td>Larsen, Oda Marie<br />Westjordet</td>
+              <td id="adresse">Aasmund Vinjes gt 4,<br />2315 Hamar</td>
+              <td>469 20 550</td>
+              <td>oda_larsen@live.no</td>
+            </tr>
+            <tr id="styret">
+              <td>Sele, Synvis Wannag</td>
+              <td id="adresse">Stavhellinga 19,<br />2319 Hamar</td>
+              <td>625 44 698</td>
+              <td>synvisws@online.no</td>
+            </tr>
+            <tr id="ute">
+              <td>Tønnessen, Tobias<br />Havnen</td>
+              <td id="adresse">Ajerveien 7A,<br />2319 Hamar</td>
+              <td>625 28 075<br />416 92 977</td>
+              <td>tobiasht93@gmail.com</td>
+            </tr>
+          </table>
+        </div>
+        <div class="button" style="width: 740px; margin-top: 0px; margin-left: 40px; background-color: gray;" onclick="toggle_visibility('kongsvinger')";>
+          <p class="button-text">KONGSVINGER (1)</p>
+        </div>
+        <div id="kongsvinger" class="button" style="width: 740px; height: auto; margin-top: 0px; margin-left: 40px; background-color: white; display: none;">
+          <table>
+            <tr>
+              <th>Navn</th>
+              <th id="adresse">Adresse</th>
+              <th>Telefon</th>
+              <th>E-post</th>
+            </tr>
+            <tr>
+              <td>Haraldsrud, Elisabeth</td>
+              <td id="adresse">Utsiktsveien 4,<br />2208 Kongsvinger</td>
+              <td>913 71 579</td>
+              <td>elisabeth.haraldsrud@gmail.com</td>
+            </tr>
+          </table>
+        </div>
+        <div class="button" style="width: 740px; margin-top: 0px; margin-left: 40px; background-color: gray;" onclick="toggle_visibility('rena')";>
+          <p class="button-text">RENA (5)</p>
+        </div>
+        <div id="rena" class="button" style="width: 740px; height: auto; margin-top: 0px; margin-left: 40px; background-color: white; display: none;">
+          <table>
+            <tr>
+              <th>Navn</th>
+              <th id="adresse">Adresse</th>
+              <th>Telefon</th>
+              <th>E-post</th>
+            </tr>
+            <tr id="styret">
+              <td>Bjørkholen, Beate</td>
+              <td id="adresse">Rønningsdalen 26,<br />2450 Rena</td>
+              <td>913 64 758</td>
+              <td>bb_ratata@hotmail.com</td>
+            </tr>
+            <tr>
+              <td>Sørensen, Anna Sannes</td>
+              <td id="adresse">Sjøgata 10,<br />2450 Rena</td>
+              <td>958 71 898</td>
+              <td>anna.sannes@hotmail.com</td>
+            </tr>
+            <tr>
+              <td>Sørensen, Aslak Mareno</td>
+              <td id="adresse">Sjøgata 10,<br />2450 Rena</td>
+              <td>900 51 797</td>
+              <td>aslakms@online.no</td>
+            </tr>
+            <tr id="styret">
+              <td>Sørensen, Kari Sannes</td>
+              <td id="adresse">Sjøgata 10,<br />2450 Rena</td>
+              <td>992 70 030</td>
+              <td>karisaso@online.no</td>
+            </tr>
+            <tr>
+              <td>Sørensen, Marta Sannes</td>
+              <td id="adresse">Sjøgata 10,<br />2450 Rena</td>
+              <td>624 41 502</td>
+              <td>martasorensen@hotmail.com</td>
+            </tr>
+          </table>
+        </div>
+        <div class="button" style="width: 740px; margin-top: 0px; margin-left: 40px; background-color: gray;" onclick="toggle_visibility('ringsaker')";>
+          <p class="button-text">RINGSAKER (6)</p>
+        </div>
+        <div id="ringsaker" class="button" style="width: 740px; height: auto; margin-top: 0px; margin-left: 40px; background-color: white; display: none;">
+          <table>
+            <tr>
+              <th>Navn</th>
+              <th id="adresse">Adresse</th>
+              <th>Telefon</th>
+              <th>E-post</th>
+            </tr>
+            <tr>
+              <td>Bekken, Kari Elisabet</td>
+              <td id="adresse">Dalbylykkja 17,<br />2380 Brumunddal</td>
+              <td>623 40 159<br />901 51 710</td>
+              <td>karielisabetbekken@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Røhnebæk, Kjersti</td>
+              <td id="adresse">Onsumveien 141,<br />2365 Åsmarka</td>
+              <td>979 87 830</td>
+              <td>kjerstirohnebak@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Skjelbostad, Sigrid Fu</td>
+              <td id="adresse">Dalbyvegen 14,<br />2386 Brumunddal</td>
+              <td>473 37 100</td>
+              <td>sigridfu@hotmail.com</td>
+            </tr>
+            <tr id="ute">
+              <td>Sletten, Kirsti</td>
+              <td id="adresse">Bjørgedalsvegen 123,<br />2388 Brumunddal</td>
+              <td>403 86 262</td>
+              <td>kirstisletten@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Ødegård, Linea B. Strand</td>
+              <td id="adresse">Kløvstadhøgdvegen 189,<br />2372 Brøttum</td>
+              <td>623 68 924<br />940 39 966</td>
+              <td>lineaodegard@outlook.com</td>
+            </tr>
+            <tr id="styret">
+              <td>Øfsti, Bjørg</td>
+              <td id="adresse">Dalbyvegen 14,<br />2380 Brumunddal</td>
+              <td>915 61 611</td>
+              <td>bjorg.ofsti@yahoo.com</td>
+            </tr>
+          </table>
+        </div>
+        <div class="button" style="width: 740px; margin-top: 0px; margin-left: 40px; background-color: gray;" onclick="toggle_visibility('stange')";>
+          <p class="button-text">STANGE (4)</p>
+        </div>
+        <div id="stange" class="button" style="width: 740px; height: auto; margin-top: 0px; margin-left: 40px; background-color: white; display: none;">
+          <table>
+            <tr>
+              <th>Navn</th>
+              <th id="adresse">Adresse</th>
+              <th>Telefon</th>
+              <th>E-post</th>
+            </tr>
+            <tr>
+              <td>Haugtomt, Halvard<br />Andreas Sele</td>
+              <td id="adresse">Ilevegen 9,<br />2312 Ottestad</td>
+              <td>625 33 698<br />975 44 816</td>
+              <td>halvard@haugtomt.no</td>
+            </tr>
+            <tr>
+              <td>Nordsveen, Marit</td>
+              <td id="adresse">Storgata 7,<br />2335 Stange</td>
+              <td>625 72 386</td>
+              <td>marit_nordsveen@hotmail.com</td>
+            </tr>
+            <tr id="ute">
+              <td>Stensberg, Thora Maria<br />Eliassen</td>
+              <td id="adresse">Jernsetervegen 146,<br />2335 Stange</td>
+              <td>625 82 357<br />456 99 887</td>
+              <td>thora-maria@live.no</td>
+            </tr>
+            <tr id="styret">
+              <td>Vegard, Eivind</td>
+              <td id="adresse">Fokholgutua 84,<br />2335 Stange</td>
+              <td>415 52 479</td>
+              <td>vegard_e98@hotmail.com</td>
+            </tr>
+          </table>
+        </div>
+        <div class="button" style="width: 740px; margin-top: 0px; margin-left: 40px; background-color: gray;" onclick="toggle_visibility('tynset')";>
+          <p class="button-text">TYNSET (2)</p>
+        </div>
+        <div id="tynset" class="button" style="width: 740px; height: auto; margin-top: 0px; margin-left: 40px; background-color: white; display: none;">
+          <table>
+            <tr>
+              <th>Navn</th>
+              <th id="adresse">Adresse</th>
+              <th>Telefon</th>
+              <th>E-post</th>
+            </tr>
+            <tr>
+              <td>Borgos, Kari Kristine<br />Almåsvold</td>
+              <td id="adresse">Bjønnkroken 31,<br />2500 Tynset</td>
+              <td>455 13 171</td>
+              <td>kari.borgos@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Nergaard, Magni</td>
+              <td id="adresse">Åsveien 3,<br />2500 Tynset</td>
+              <td>906 03 305</td>
+              <td>magni.nergaard@fjellnett.no</td>
+            </tr>
+          </table>
+        </div>
+        <div class="button" style="width: 740px; margin-top: 0px; margin-left: 40px; background-color: gray;" onclick="toggle_visibility('våler')";>
+          <p class="button-text">VÅLER (1)</p>
+        </div>
+        <div id="våler" class="button" style="width: 740px; height: auto; margin-top: 0px; margin-left: 40px; background-color: white; display: none;">
+          <table>
+            <tr>
+              <th>Navn</th>
+              <th id="adresse">Adresse</th>
+              <th>Telefon</th>
+              <th>E-post</th>
+            </tr>
+            <tr>
+              <td>Sjølie, Tina Yumin</td>
+              <td id="adresse">Bureiservegen 25,<br />2435 Braskereidfoss</td>
+              <td>955 54 406</td>
+              <td>tinayumin@yahoo.com</td>
+            </tr>
+          </table>
+        </div>
+        <div class="button" style="width: 740px; margin-top: 0px; margin-left: 40px; background-color: gray;" onclick="toggle_visibility('åsnes')";>
+          <p class="button-text">ÅSNES (2)</p>
+        </div>
+        <div id="åsnes" class="button" style="width: 740px; height: auto; margin-top: 0px; margin-left: 40px; background-color: white; display: none;">
+          <table>
+            <tr>
+              <th>Navn</th>
+              <th id="adresse">Adresse</th>
+              <th>Telefon</th>
+              <th>E-post</th>
+            </tr>
+            <tr>
+              <td>Bestum, Tiril Krogh</td>
+              <td id="adresse">Trangsrudroa 116,<br />2270 Flisa</td>
+              <td>473 88 961</td>
+              <td>tirilak@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Glorvigen, Borghild</td>
+              <td id="adresse">Østre Gjesåsveg 580,<br />2280 Gjesåsen</td>
+              <td>629 50 177<br />948 67 585</td>
+              <td>borghild.glorvigen@lr.no</td>
+            </tr>
+          </table>
+        </div>
+        </div>
+      </div>
+      <div class="button" style="width: 740px; margin-left: 40px; background-color: #9A9A9A;" onclick="toggle_visibility('oppland')";>
+        <p class="button-text">OPPLAND (4)</p>
+      </div>
+      <div id="oppland" style="display: none;">
+        <div class="button" style="width: 740px; margin-top: 0px; margin-left: 40px; background-color: gray;" onclick="toggle_visibility('oppland-kommuner'); toggle_visibility('oppland-alle')";>
+          <p class="button-text">VIS ALLE (4)</p>
+        </div>
+        <div id="oppland-alle" class="button" style="width: 740px; height: auto; margin-top: 0px; margin-left: 40px; background-color: white; display: none;">
+          <table>
+            <tr>
+              <th>Navn</th>
+              <th id="adresse">Adresse</th>
+              <th>Telefon</th>
+              <th>E-post</th>
+            </tr>
+            <tr>
+              <td>Engh, Christian</th>
+              <td id="adresse">Fjellstien 3,<br />2821 Gjøvik</th>
+              <td>611 69 135<br />970 97 350</th>
+              <td>cheng@innovasjonnorge.no</th>
+            </tr>
+            <tr>
+              <td>Masurel, Ymke</th>
+              <td id="adresse">Høystadvegen 1,<br />2630 Ringebu</th>
+              <td>614 22 716<br />905 71 364</th>
+              <td>ymke@broadpark.no</th>
+            </tr>
+            <tr>
+              <td>Sæthre, Wenche Bjor</th>
+              <td id="adresse">Nesgutua 35,<br />2860 Hov</th>
+              <td>611 25 420</th>
+              <td>wenche_bjor4@hotmail.com</th>
+            </tr>
+            <tr>
+              <td>Søyland, Aud</th>
+              <td id="adresse">Sylvsmedvegen 44,<br />2920 Leira (Valdres)</th>
+              <td>613 62 556<br />990 37 584</th>
+              <td>aud.soyland@bbnett.no</th>
+            </tr>
+          </table>
+        </div>
+        <div id="oppland-kommuner" style="display: block;">
+        <div class="button" style="width: 740px; margin-top: 0px; margin-left: 40px; background-color: gray;" onclick="toggle_visibility('gjøvik')";>
+          <p class="button-text">GJØVIK (1)</p>
+        </div>
+        <div id="gjøvik" class="button" style="width: 740px; height: auto; margin-top: 0px; margin-left: 40px; background-color: white; display: none;">
+          <table>
+            <tr>
+              <th>Navn</th>
+              <th id="adresse">Adresse</th>
+              <th>Telefon</th>
+              <th>E-post</th>
+            </tr>
+            <tr>
+              <td>Engh, Christian</th>
+              <td id="adresse">Fjellstien 3,<br />2821 Gjøvik</th>
+              <td>611 69 135<br />970 97 350</th>
+              <td>cheng@innovasjonnorge.no</th>
+            </tr>
+          </table>
+        </div>
+        <div class="button" style="width: 740px; margin-top: 0px; margin-left: 40px; background-color: gray;" onclick="toggle_visibility('nordaurdal')";>
+          <p class="button-text">NORD-AURDAL (1)</p>
+        </div>
+        <div id="nordaurdal" class="button" style="width: 740px; height: auto; margin-top: 0px; margin-left: 40px; background-color: white; display: none;">
+          <table>
+            <tr>
+              <th>Navn</th>
+              <th id="adresse">Adresse</th>
+              <th>Telefon</th>
+              <th>E-post</th>
+            </tr>
+            <tr>
+              <td>Søyland, Aud</th>
+              <td id="adresse">Sylvsmedvegen 44,<br />2920 Leira (Valdres)</th>
+              <td>613 62 556<br />990 37 584</th>
+              <td>aud.soyland@bbnett.no</th>
+            </tr>
+          </table>
+        </div>
+        <div class="button" style="width: 740px; margin-top: 0px; margin-left: 40px; background-color: gray;" onclick="toggle_visibility('ringebu')";>
+          <p class="button-text">RINGEBU (1)</p>
+        </div>
+        <div id="ringebu" class="button" style="width: 740px; height: auto; margin-top: 0px; margin-left: 40px; background-color: white; display: none;">
+          <table>
+            <tr>
+              <th>Navn</th>
+              <th id="adresse">Adresse</th>
+              <th>Telefon</th>
+              <th>E-post</th>
+            </tr>
+            <tr>
+              <td>Masurel, Ymke</th>
+              <td id="adresse">Høystadvegen 1,<br />2630 Ringebu</th>
+              <td>614 22 716<br />905 71 364</th>
+              <td>ymke@broadpark.no</th>
+            </tr>
+          </table>
+        </div>
+        <div class="button" style="width: 740px; margin-top: 0px; margin-left: 40px; background-color: gray;" onclick="toggle_visibility('søndreland')";>
+          <p class="button-text">SØNDRE LAND (1)</p>
+        </div>
+        <div id="søndreland" class="button" style="width: 740px; height: auto; margin-top: 0px; margin-left: 40px; background-color: white; display: none;">
+          <table>
+            <tr>
+              <th>Navn</th>
+              <th id="adresse">Adresse</th>
+              <th>Telefon</th>
+              <th>E-post</th>
+            </tr>
+            <tr>
+              <td>Sæthre, Wenche Bjor</th>
+              <td id="adresse">Nesgutua 35,<br />2860 Hov</th>
+              <td>611 25 420</th>
+              <td>wenche_bjor4@hotmail.com</th>
+            </tr>
+          </table>
+        </div>
+        </div>
+      </div>
+      <div class="button" style="width: 740px; margin-left: 40px; background-color: #9A9A9A;" onclick="toggle_visibility('alle')";>
+        <p class="button-text">VIS ALLE (37)</p>
+      </div>
+      <div id="alle" class="button" style="width: 740px; height: auto; margin-top: 0px; margin-left: 40px; background-color: white; display: none;">
+          <table>
+            <tr>
+              <th>Navn</th>
+              <th>Adresse</th>
+              <th>Telefon</th>
+              <th>E-post</th>
+            </tr>
+            <tr>
+              <td>Bekken, Kari Elisabet</td>
+              <td id="adresse">Dalbylykkja 17,<br />2380 Brumunddal</td>
+              <td>623 40 159<br />901 51 710</td>
+              <td>karielisabetbekken@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Bestum, Tiril Krogh</td>
+              <td id="adresse">Trangsrudroa 116,<br />2270 Flisa</td>
+              <td>473 88 961</td>
+              <td>tirilak@gmail.com</td>
+            </tr>
+            <tr id="styret">
+              <td>Bjørkholen, Beate</td>
+              <td id="adresse">Rønningsdalen 26,<br />2450 Rena</td>
+              <td>913 64 758</td>
+              <td>bb_ratata@hotmail.com</td>
+            </tr>
+            <tr id="styret">
+              <td>Bjørlo, Astrid</td>
+              <td id="adresse">Lille Prestrudveg 43,<br />2315 Hamar</td>
+              <td>907 18 567</td>
+              <td>rubenyga@online.no</td>
+            </tr>
+            <tr>
+              <td>Borgos, Kari Kristine<br />Almåsvold</td>
+              <td id="adresse">Bjønnkroken 31,<br />2500 Tynset</td>
+              <td>455 13 171</td>
+              <td>kari.borgos@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Bue, Marit</td>
+              <td id="adresse">Hamarvegen 420,<br />2411 Elverum</td>
+              <td>938 65 224</td>
+              <td>maritbue@yahoo.no</td>
+            </tr>
+            <tr>
+              <td>Engh, Christian</th>
+              <td id="adresse">Fjellstien 3,<br />2821 Gjøvik</th>
+              <td>611 69 135<br />970 97 350</th>
+              <td>cheng@innovasjonnorge.no</th>
+            </tr>
+            <tr>
+              <td>Glorvigen, Borghild</td>
+              <td id="adresse">Østre Gjesåsveg 580,<br />2280 Gjesåsen</td>
+              <td>629 50 177<br />948 67 585</td>
+              <td>borghild.glorvigen@lr.no</td>
+            </tr>
+            <tr>
+              <td>Haraldsrud, Elisabeth</td>
+              <td id="adresse">Utsiktsveien 4,<br />2208 Kongsvinger</td>
+              <td>913 71 579</td>
+              <td>elisabeth.haraldsrud@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Haugtomt, Halvard<br />Andreas Sele</td>
+              <td id="adresse">Ilevegen 9,<br />2312 Ottestad</td>
+              <td>625 33 698<br />975 44 816</td>
+              <td>halvard@haugtomt.no</td>
+            </tr>
+            <tr>
+              <td>Henjum, Mette</td>
+              <td id="adresse">Løypevegen 23,<br />2319 Hamar</td>
+              <td>990 26 910</td>
+              <td>mette.henjum@gmail.com</td>
+            </tr>
+            <tr id="styret">
+              <td>Hovden, Jonas Fuglum</td>
+              <td id="adresse">Korsgata 25a,<br />2315 Hamar</td>
+              <td>991 29 095</td>
+              <td>jonas.hovden@live.no</td>
+            </tr>
+            <tr>
+              <td>Killi, Torill Synnøve</td>
+              <td id="adresse">Østaasvegen 625,<br />2324 Vang (Hedmark)</td>
+              <td>625 98 459<br />906 55 685</td>
+              <td>torkilli.tk41@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Kjørum, Monica</td>
+              <td id="adresse">Skjønsbergvegen 15,<br />2318 Hamar</td>
+              <td>408 41 322</td>
+              <td>mkjorum@outlook.com</td>
+            </tr>
+            <tr id="styret">
+              <td>Larsen, Kristin Westjordet</td>
+              <td id="adresse">Aasmund Vinjes gt 4,<br />2315 Hamar</td>
+              <td>625 28 932<br />418 51 390</td>
+              <td>krwe@helse-sorost.no</td>
+            </tr>
+            <tr id="ute">
+              <td>Larsen, Oda Marie<br />Westjordet</td>
+              <td id="adresse">Aasmund Vinjes gt 4,<br />2315 Hamar</td>
+              <td>469 20 550</td>
+              <td>oda_larsen@live.no</td>
+            </tr>
+            <tr>
+              <td>Masurel, Ymke</th>
+              <td id="adresse">Høystadvegen 1,<br />2630 Ringebu</th>
+              <td>614 22 716<br />905 71 364</th>
+              <td>ymke@broadpark.no</th>
+            </tr>
+            <tr>
+              <td>Nergaard, Magni</td>
+              <td id="adresse">Åsveien 3,<br />2500 Tynset</td>
+              <td>906 03 305</td>
+              <td>magni.nergaard@fjellnett.no</td>
+            </tr>
+            <tr>
+              <td>Nordsveen, Marit</td>
+              <td id="adresse">Storgata 7,<br />2335 Stange</td>
+              <td>625 72 386</td>
+              <td>marit_nordsveen@hotmail.com</td>
+            </tr>
+            <tr>
+              <td>Røhnebæk, Kjersti</td>
+              <td id="adresse">Onsumveien 141,<br />2365 Åsmarka</td>
+              <td>979 87 830</td>
+              <td>kjerstirohnebak@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Sæthre, Wenche Bjor</th>
+              <td id="adresse">Nesgutua 35,<br />2860 Hov</th>
+              <td>611 25 420</th>
+              <td>wenche_bjor4@hotmail.com</th>
+            </tr>
+            <tr>
+              <td>Schulstad, Elsa Helene</td>
+              <td id="adresse">Solveien 4,<br />2406 Elverum</td>
+              <td>990 14 085</td>
+              <td>elsa.schulstad@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Schulstad, Ingrid</td>
+              <td id="adresse">Solveien 4,<br />2406 Elverum</td>
+              <td>942 17 202</td>
+              <td>ingrid.schulstad@gmail.com</td>
+            </tr>
+            <tr id="styret">
+              <td>Sele, Synvis Wannag</td>
+              <td id="adresse">Stavhellinga 19,<br />2319 Hamar</td>
+              <td>625 44 698</td>
+              <td>synvisws@online.no</td>
+            </tr>
+            <tr>
+              <td>Sjølie, Tina Yumin</td>
+              <td id="adresse">Bureiservegen 25,<br />2435 Braskereidfoss</td>
+              <td>955 54 406</td>
+              <td>tinayumin@yahoo.com</td>
+            </tr>
+            <tr>
+              <td>Skjelbostad, Sigrid Fu</td>
+              <td id="adresse">Dalbyvegen 14,<br />2386 Brumunddal</td>
+              <td>473 37 100</td>
+              <td>sigridfu@hotmail.com</td>
+            </tr>
+            <tr id="ute">
+              <td>Sletten, Kirsti</td>
+              <td id="adresse">Bjørgedalsvegen 123,<br />2388 Brumunddal</td>
+              <td>403 86 262</td>
+              <td>kirstisletten@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Sørensen, Anna Sannes</td>
+              <td id="adresse">Sjøgata 10,<br />2450 Rena</td>
+              <td>958 71 898</td>
+              <td>anna.sannes@hotmail.com</td>
+            </tr>
+            <tr>
+              <td>Sørensen, Aslak Mareno</td>
+              <td id="adresse">Sjøgata 10,<br />2450 Rena</td>
+              <td>900 51 797</td>
+              <td>aslakms@online.no</td>
+            </tr>
+            <tr id="styret">
+              <td>Sørensen, Kari Sannes</td>
+              <td id="adresse">Sjøgata 10,<br />2450 Rena</td>
+              <td>992 70 030</td>
+              <td>karisaso@online.no</td>
+            </tr>
+            <tr>
+              <td>Sørensen, Marta Sannes</td>
+              <td id="adresse">Sjøgata 10,<br />2450 Rena</td>
+              <td>624 41 502</td>
+              <td>martasorensen@hotmail.com</td>
+            </tr>
+            <tr>
+              <td>Søyland, Aud</th>
+              <td id="adresse">Sylvsmedvegen 44,<br />2920 Leira (Valdres)</th>
+              <td>613 62 556<br />990 37 584</th>
+              <td>aud.soyland@bbnett.no</th>
+            </tr>
+            <tr id="ute">
+              <td>Stensberg, Thora Maria<br />Eliassen</td>
+              <td id="adresse">Jernsetervegen 146,<br />2335 Stange</td>
+              <td>625 82 357<br />456 99 887</td>
+              <td>thora-maria@live.no</td>
+            </tr>
+            <tr id="ute">
+              <td>Tønnessen, Tobias<br />Havnen</td>
+              <td id="adresse">Ajerveien 7A,<br />2319 Hamar</td>
+              <td>625 28 075<br />416 92 977</td>
+              <td>tobiasht93@gmail.com</td>
+            </tr>
+            <tr id="styret">
+              <td>Vegard, Eivind</td>
+              <td id="adresse">Fokholgutua 84,<br />2335 Stange</td>
+              <td>415 52 479</td>
+              <td>vegard_e98@hotmail.com</td>
+            </tr>
+            <tr>
+              <td>Ødegård, Linea B. Strand</td>
+              <td id="adresse">Kløvstadhøgdvegen 189,<br />2372 Brøttum</td>
+              <td>623 68 924<br />940 39 966</td>
+              <td>lineaodegard@outlook.com</td>
+            </tr>
+            <tr>
+              <td>Øfsti, Bjørg</td>
+              <td id="adresse">Dalbyvegen 14,<br />2380 Brumunddal</td>
+              <td>915 61 611</td>
+              <td>bjorg.ofsti@yahoo.com</td>
+            </tr>
+          </table>
+        </div>
+      <div class="button" style="width: 740px; margin-top: 0px; margin-left: 40px; background-color: #e6e6e6;">
+      </div>
+  </body>
+</html>

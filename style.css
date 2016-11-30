@@ -1,0 +1,36 @@
+html, body {	
+width: 100%;
+margin: 0;
+padding: 0;
+background-color: #737373;
+}
+
+#content {	
+width: 820px;
+height: 610px;
+padding: auto;
+margin: 0 auto;
+background-color: #e6e6e6;
+overflow: auto; 
+}
+
+.button {
+background-color: #429bf4;
+height: 150px;
+width: 350px;
+margin: 0;
+margin-top: 40px;
+padding: 0;
+float: left;
+}
+
+.button-text {
+margin: 0;
+padding: 0;
+color: white;
+text-align: center;
+vertical-align: middle;
+line-height: 150px;
+font-family: Tahoma;
+font-size: 50px;
+letter-spacing: 5px;
