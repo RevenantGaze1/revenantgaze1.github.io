@@ -14,6 +14,33 @@ background-color: #e6e6e6;
 overflow: auto; 
 }
 
+.navbutton {
+background-color: #ffffff;
+height: 60px;
+width: 25%;
+margin: 0;
+padding: 0;
+float: left;
+line-height: 60px;
+color: black;
+}
+
+.navbutton-text {
+margin: 0;
+padding: 0;
+text-align: center;
+vertical-align: middle;
+line-height: 60px;
+font-family: Tahoma;
+font-size: 15px;
+letter-spacing: 5px;
+}
+
+.navbutton:hover {
+background-color: black;
+color: white;
+}
+
 .button {
 background-color: #429bf4;
 height: 150px;
