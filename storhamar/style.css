@@ -1,0 +1,270 @@
+
+@font-face {
+    font-family: 'Genericons';
+    src: url('font/genericons-regular-webfont.eot');
+    src: url('font/genericons-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/genericons-regular-webfont.woff') format('woff'),
+         url('font/genericons-regular-webfont.ttf') format('truetype'),
+         url('font/genericons-regular-webfont.svg#genericonsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.my-icon:before {
+	content: '\f304';
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 32px/1 'Genericons';
+	vertical-align: middle;
+}
+
+html, body {	
+width: 100%;
+margin: 0;
+padding: 0;
+background-color: #f9fcff;
+}
+
+p {
+font-family: verdana;
+font-size: 14px;
+line-height: 25px;
+}
+
+#container {	
+height: auto;
+width: 100%;
+margin: 0 auto;
+padding: 0;
+}
+
+#header {	
+height: 60px;
+width: 100%;
+margin: auto;
+padding: 0;
+background-color: #FECB00;
+border-top: 7px solid #0e20a5;
+border-bottom: 7px solid lightgray;
+position: fixed;
+}
+
+#logo {
+width: 270px;
+float: left;
+margin: auto;
+padding: 0;
+color: #2382e0;
+}
+
+#logo:hover {
+width: 270px;
+float: left;
+margin: auto;
+padding: 0;
+color: #2382e0;
+}
+
+#navbar {
+width: 100%;
+margin: 0;
+padding: 0;
+}
+
+.dropbtn {
+background-color: #fecb00;
+color: #2382e0;
+padding: 16px;
+border: none;
+height: 60px;
+font-family: Tahoma;
+font-size: 14px;
+line-height: 25px;
+letter-spacing: 5px;
+border-left: 2px solid #e5b700;
+}
+
+#dropbtn_active {
+background-color: #2382e0;
+color: #fecb00;
+}
+
+.dropdown {
+position: relative;
+float: left;
+display: inline-block;
+}
+
+.dropdown-content {
+font-size: 14px;
+font-family: Tahoma;
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+width: 315px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+left: 3px;
+}
+
+.dropdown-content a {
+color: black;
+padding: 9px 12px;
+text-decoration: none;
+display: block;
+letter-spacing: 2px;
+}
+
+.dropdown-content a:hover {
+background-color: #f1f1f1
+}
+
+.dropbtn:hover {
+background-color: #2382e0;
+color: #fecb00;
+cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.navbutton {	
+height: 60px;
+margin: 0;
+padding: 0;
+float: left;
+background-color: #fecb00;
+color: #2382e0;
+border-left: 2px solid #e5b700;
+border-right: 2px solid #e5b700;
+display: inline-block;
+}
+
+.navbutton:hover {	
+background-color: #2382e0;
+color: #fecb00;
+}
+
+#navbutton_active {	
+background-color: #2382e0;
+color: #fecb00;
+border-left: 2px solid #e5b700;
+}
+
+.navbutton_text {
+margin: 0;
+padding: 0;
+line-height: 60px;
+text-align: center;
+vertical-align: middle;
+font-family: Tahoma;
+font-size; 15px;
+letter-spacing: 5px;
+}
+
+#navbutton_text_active {
+line-height: 60px; 
+text-decoration: none;
+}
+
+#navbutton_text_logo {
+line-height: 60px; 
+text-decoration: none;
+}
+
+#navbutton_text_logo:hover {
+color: #0e20a5;
+}
+
+.separator {
+width: 100%;
+margin: 0;
+height: 7px;
+}
+
+.sidebar {
+width: 25%;
+height: 620px;
+margin: 0;
+display: inline-block;
+float: left;
+margin-top: 74px;
+}
+
+#middle {	
+display: inline-block;
+height: auto;
+width: 50%;
+margin: 0;
+background-color: #f9fcff;
+overflow: auto;
+font-family: verdana;
+color: #5b5959;
+text-decoration: none;
+border-right: 1px solid lightgray;
+border-left: 1px solid lightgray;
+float: left;
+padding: 0;
+margin-top: 110px;
+margin-bottom: 36px;
+}
+
+#content {
+display: inline-block;
+height: auto;
+width: 92%;
+margin: 0;
+margin-left: 4%;
+margin-bottom: 20px;
+}
+
+#cuper {
+width: 100%;
+margin: 0;
+margin-top: 20px;	
+}
+
+#cup {
+height: 120px;
+width: 32%;
+display: inline-block;
+background-color: #ededed;
+color: #5a5a5a;
+margin-top: 2%;
+border: none;
+}
+
+#cup:hover {
+background-color: #5a5a5a;
+color: #ededed;
+}
+
+#cup_text {
+margin: auto;
+margin-top: 10px;
+vertical-align: middle;
+text-align: center;
+line-height: 25px;
+letter-spacing: 2px;
+}
+
+.left {
+width: 22.8%;
+height: 620px;
+margin: 0;
+display: inline-block;
+float: right;
+margin-top: 74px;
+}
+
+#footer {	
+height: 60px;
+width: 100%;
+margin: auto;
+background-color: #FECB00;
+clear: both;
+border-top: 7px solid lightgray;
+border-bottom: 7px solid #2382e0;
+}
