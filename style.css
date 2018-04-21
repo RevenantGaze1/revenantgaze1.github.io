@@ -15,6 +15,23 @@ padding: 0;
 background-color: #ffffff;
 }
 
+a {
+text-decoration: none;
+color: auto;
+}
+
+a:link {
+text-decoration: none;
+}
+
+#homepage {
+color: black;
+}
+
+#homepage:hover {
+color: #e77422;
+}
+
 #header {
 height: 230px;
 width: 100%;

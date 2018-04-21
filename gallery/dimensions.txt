@@ -1,0 +1,5 @@
+Vertical:
+1x1.49
+
+Horizontal:
+1.59x1

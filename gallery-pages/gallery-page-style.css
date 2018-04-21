@@ -1,0 +1,56 @@
+#nav-gallery-wrapper {
+width: 100%;
+height: auto;
+border: 1px solid green;
+}
+
+#nav-gallery-previous {
+float: left;
+margin: 0;
+width: 200px;
+padding: 0;	
+border: 1px solid black;
+}
+
+#nav-gallery-next {
+float: right;
+margin: 0;
+width: 200px;
+padding: 0;	
+border: 1px solid black;
+}
+
+#next-wrapper {
+float: right;
+}
+
+#nav-gallery {
+color: black;
+}
+
+#nav-gallery:hover {
+color: #e77422;
+}
+
+#info {
+clear: both;
+width: 100%;
+height: auto;
+border: 1px solid red;
+}
+
+#painting-img {
+display: block;
+margin: auto;
+max-height: 600px;
+height: auto;
+max-width: 600px;
+width: auto;	
+}
+
+#painting-title {
+float: center;
+text-align: center;
+font-family: Garamond;
+letter-spacing: 2px;
+}
