@@ -7,22 +7,10 @@
 				-moz-box-sizing:border-box;
 				-webkit-box-sizing:border-box; 
 				box-sizing:border-box;
+				padding: 2px;
 				}
 			</style>
 			<script>
-				var input = document.getElementById("inputPlayerPercent");
-
-				// Execute a function when the user releases a key on the keyboard
-				input.addEventListener("keyup", function(event) {
-				  // Number 13 is the "Enter" key on the keyboard
-					if (event.keyCode === 13) {
-						// Cancel the default action, if needed
-						event.preventDefault();
-						// Trigger the button element with a click
-						document.getElementById("buttonCalculateExperience").click();
-					}
-				});
-				
 				function calculateExperience() {
 					let playerCurrentPercent = document.getElementById("inputPlayerPercent").value;
 					var playerCurrentRank = document.getElementById("inputPlayerRank").value;
@@ -35,8 +23,8 @@
 					
 					var splitNumber = playerCurrentTotalExperience.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 					
-					resultTotalExperience.value = splitNumber + " ± 1000xp";
-					resultCurrentRankExperience.value = playerCurrentRankExperience.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " ± 1000xp";
+					resultTotalExperience.value = splitNumber + " ± 1000";
+					resultCurrentRankExperience.value = playerCurrentRankExperience.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " ± 1000";
 				}
 			</script>
 			<title>MH xp-kalkulator</title>
@@ -47,8 +35,7 @@
 				<input style="margin: 0 auto; position: center; display: block; width: 35%; height: 40px; font-size: 1em;color: gray;" id="inputPlayerPercent" value=""></input><br>
 				<p style="margin: 0 auto; display: block; width: 35%; line-height: 30px;">Rank:</p>
 				<select id="inputPlayerRank" value="Spillerens rank" style="margin: 0 auto; position: center; display: block; width: 35%; height: 40px; font-size: 1em;color: gray;">
-					<option value="0" selected></option>
-					<option value=0>Nybegynner</option>
+					<option value=0 selected>Nybegynner</option>
 					<option value=20>Bråkmaker</option>
 					<option value=150>Løpegutt</option>
 					<option value=370>Langer</option>
@@ -68,8 +55,22 @@
 				</select></br>
 				<p style="margin: 0 auto; display: block; width: 35%; line-height: 30px;">Total xp:</p>
 				<input style="margin: 0 auto; position: center; display: block; width: 35%; height: 40px; font-size: 1em;color: gray;" id="fieldTotalExperience" value=""></input><br>
-				<p style="margin: 0 auto; display: block; width: 35%; line-height: 30px;">Xp inn i neste rank:</p>
+				<p style="margin: 0 auto; display: block; width: 35%; line-height: 30px;">Xp mot neste rank:</p>
 				<input style="margin: 0 auto; position: center; display: block; width: 35%; height: 40px; font-size: 1em;color: gray;" id="fieldCurrentRankExperience" value=""></input><br>
 				<input type="button" id="buttonCalculateExperience" value="Regn ut spillerens xp" onclick="calculateExperience()"style="margin: 0 auto; position: center; display: block; width: 35%; height: 40px; font-size: 1em;">
-    </body>
-  </html>
+			<script>
+				var input = document.getElementById("inputPlayerPercent");
+
+				// Execute a function when the user releases a key on the keyboard
+				input.addEventListener("keyup", function(event) {
+				  // Number 13 is the "Enter" key on the keyboard
+					if (event.keyCode === 13) {
+						// Cancel the default action, if needed
+						event.preventDefault();
+						// Trigger the button element with a click
+						document.getElementById("buttonCalculateExperience").click();
+					}
+				});
+			</script>	
+		</body>
+	</html>
