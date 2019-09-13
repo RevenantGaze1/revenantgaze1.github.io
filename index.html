@@ -1,72 +1,79 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8"> 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-    <link rel="stylesheet" href="style.css">
-    <title>Hjem</title>
-    <style>
-      
-    </style>
-  </head>
-  <body>
-    <div id="page">
-	  <div id="header">
-		<div style="width: 900px; height: auto; margin: auto;"><!--border: 1px solid black;--> 
-			<h1 style="font-family: 'BP Regular', Courier, sans-serif; letter-spacing: 5px; margin-top: 50px;" align="center"><a href="index.html" id="homepage">PAINTSPEAKER</a></h1>
-			<div id="social-media">
-				<div style="margin: auto; height: auto; width: 50px;">
-					<a href="https://instagram.com/paintspeaker" target="_blank" class="fa fa-instagram"></a>
-				</div>
+  <html>
+    <head>
+      <style>
+		input, select {
+			-ms-box-sizing:border-box;
+			-moz-box-sizing:border-box;
+			-webkit-box-sizing:border-box; 
+			box-sizing:border-box;
+			}
+      </style>
+    </head>
+    <body style="display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 96%;
+  width: 99%;">
+		<div id="content" style="margin: 0 auto; width: 80%; margin-top: 80px;
+  display: table-cell;
+  vertical-align: middle;">
+		<input style="margin: 0 auto; position: center; display: block; width: 35%; height: 40px; font-size: 1em;color: gray;" id="inputPlayerPercent" value="Spillerens BH-prosent"></input><br>
+		<select id="inputPlayerRank" value="Spillerens rank" style="margin: 0 auto; position: center; display: block; width: 35%; height: 40px; font-size: 1em;color: gray;">
+			<option value="0" selected>Spillerens rank</option>
+			<option value=0>Nybegynner</option>
+			<option value=20>Bråkmaker</option>
+			<option value=150>Løpegutt</option>
+			<option value=370>Langer</option>
+			<option value=1300>Gangster</option>
+			<option value=3000>Hitman</option>
+			<option value=8000>Juniorsjef</option>
+			<option value=15000>Sjef</option>
+			<option value=40000>Kaptein</option>
+			<option value=70000>Gudfar</option>
+			<option value=150000>Leg. gudfar</option>
+			<option value=300000>Don</option>
+			<option value=800000>Leg. don</option>
+			<option value=1500000>Crime King</option>
+			<option value=2500000>Legende</option>
+			<option value=5000000>Legende x2</option>
+			<option value=7500000>Legende x3</option>
+		</select></br>
+		<input type="button" id="calculateButton" value="Regn ut spillerens xp" onclick="calculateExperience()"style="margin: 0 auto; position: center; display: block; width: 35%; height: 40px; font-size: 1em;">
+		<div style="margin: 0 auto; position: center; display: block; width: 35%; height: 40px; font-size: 1em;"><h4 id="totalExperience">Spillerens totale xp</h4>
+		<h4 id="currentRankExperience">Xp inn i neste rank</h4>
 			</div>
-		</div>
-	  </div>
-	  <div id="content">
-		<div style="width: 900px; height: auto; margin: auto; padding-bottom: 60px; padding-top: 20px;">
-			<nav class="flex">
-				<ul style="margin: 0; padding: 0;">
-					<a href="gallery-pages/gallery-test.html"><li class="img-container">
-						<img class="img-gallery" src="gallery/3.png"/>
-						<div class="img-overlay">
-							<div class="img-text">1</div>
-						</div>
-					</li></a>
-					<li class="img-container" id="img-center"><a href="#" style="text-align: center;margin: auto;">
-						<img class="img-gallery" src="gallery/4.png"/>
-						<div class="img-overlay">
-							<div class="img-text">2</div>
-						</div>
-					</a></li>
-					<li class="img-container"><a href="#">
-						<img class="img-gallery" id="right" src="gallery/5.png"/>
-						<div class="img-overlay">
-							<div class="img-text">3</div>
-						</div>
-						<!--<p class="img-description">Test</p>-->
-					</a></li>
-				</ul>
-			</nav>
-			<nav class="flex">
-				<ul style="margin: 0; padding: 0;">
-					<li class="img-container-horizontal" id="img-horizontal"><a href="#" style="text-align: center;margin: auto;">
-						<img class="img-gallery" src="gallery/1.png"/>
-						<div class="img-overlay">
-							<div class="img-text">4</div>
-						</div>
-					</a></li>
-					<li class="img-container-horizontal" id="img-horizontal" style="margin-right: 0;"><a href="#" style="text-align: center;margin: auto;">
-						<img class="img-gallery" src="gallery/2.png"/>
-						<div class="img-overlay">
-							<div class="img-text">5</div>
-						</div>
-					</a></li>
-				</ul>
-			</nav>
-		</div>
-	  </div>
-	  <div id="footer">
-	  </div>
-	</div>
-  </body>
-</html>
+		<script>
+			var input = document.getElementById("inputPlayerPercent");
+
+			// Execute a function when the user releases a key on the keyboard
+			input.addEventListener("keyup", function(event) {
+			  // Number 13 is the "Enter" key on the keyboard
+				if (event.keyCode === 13) {
+					// Cancel the default action, if needed
+					event.preventDefault();
+					// Trigger the button element with a click
+					document.getElementById("calculateButton").click();
+				}
+			});
+			
+			function calculateExperience() {
+				let playerPercent = document.getElementById("inputPlayerPercent").value;
+				var resultField = document.getElementById("totalExperience");	
+				var currentExperienceField = document.getElementById("currentRankExperience");
+							
+				var playerExperience = (416830.34 * playerPercent) - 542682.58;
+
+				var splitNumber = playerExperience.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+				
+				var playerRank = document.getElementById("inputPlayerRank").value;
+				
+				var currentRankExperience = playerExperience.toFixed(2) - playerRank;
+				
+				resultField.innerHTML = "Spillerens totale xp: " + splitNumber;
+				currentExperienceField.innerHTML = "Xp inn i neste rank: " + currentRankExperience.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+			}
+		</script>
+    </body>
+  </html>
