@@ -24,12 +24,14 @@
 					
 					var splitNumber = playerCurrentTotalExperience.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 					
-					var playerBulletAmount = ((playerCurrentTotalExperience*8)^0.73)/15;
+					var exponent = Math.pow(playerCurrentTotalExperience * 8, 0.73)
+					
+					var playerBulletAmount = exponent / 15;
 					
 					resultTotalExperience.value = splitNumber + " ± 1000";
 					resultCurrentRankExperience.value = playerCurrentRankExperience.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " ± 1000";
 					
-					resultBulletAmount.value = playerBulletAmount;
+					resultBulletAmount.value = playerBulletAmount.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 				}
 			</script>
 			<title>MH xp-kalkulator</title>
