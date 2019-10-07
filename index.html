@@ -24,7 +24,7 @@
 					
 					var splitNumber = playerCurrentTotalExperience.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 					
-					var playerBulletAmount = ((splitNumber*8)^0,73)/15;
+					var playerBulletAmount = ((playerCurrentTotalExperience*8)^0.73)/15;
 					
 					resultTotalExperience.value = splitNumber + " ± 1000";
 					resultCurrentRankExperience.value = playerCurrentRankExperience.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " ± 1000";
